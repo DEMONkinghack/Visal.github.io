@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            height: 90vh;
+        align-items: center;
+        background-image:url(image/flower33.jpg);
+background-size: cover;
+        }
+    ul{
+        display: flex;
+        gap: 50px;
+        margin-left: 255px;
+        
+    }
+    ul li{
+        display: inline-block;
+        list-style-type: none;
+        position: relative;
+  
+    }
+    ul li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size:20px;
+    color: rgb(255, 255, 255);
+    }
+    ul li a::after{
+        content: '';
+        position: absolute;
+        background-color: rgb(189, 9, 255);
+        left: 0;
+        bottom:-10px;
+        width: 00%;
+        height: 3px;
+       transition: all ease-in-out 0.5s;
+    }
+    ul li a:hover::after{
+        width: 100%;
+      
+    }
+    .Modal{
+        box-shadow: 0px 0px 20px rgb(164, 4, 192);
+        left: -500px;
+        width: 0px;
+background-image: url(image/flower1.jpg);
+background-size: cover;
+
+        height: 100%;
+        top: 0px;
+        position: absolute;
+        opacity: 0;
+        transition: all ease-in-out 0.5s;
+    }
+    .Active{
+        opacity: 1;
+    left: 0;
+     width: 60%;
+
+    }
+.Modal ul li{
+    left: 0px;
+}
+.Modal i{
+
+    position: fixed;
+    z-index:1;
+    color: rgb(240, 117, 137);
+ 
+    font-size:25px;
+
+}
+
+.Name{
+    backdrop-filter: blur(10px);
+margin-top: -35px;
+ height: 150px;
+ z-index: 99;
+
+}
+.Name h1{
+    color:pink;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.img{
+    background-image: url(image/flower\ \ rose.jpg);
+    border-radius: 10px;
+  
+    background-size: cover;
+
+    width: full;
+     height: 500px;
+}
+
+    </style>
+</head>
+<body>
+    <button onclick="OpenModal()">Open</button>
+    <div id="Modal" class="Modal">
+        <button onclick="CloseModal()">
+            <i class="fa-solid fa-person-walking-arrow-right"></i></button>
+            <div class="Name">
+                <h1>Store Flower <br>
+                    V&R</h1>
+     
+
+    <ul> 
+        <li><a href="">Flower</a></li>
+        <li><a href="">Color </a></li>
+        <li><a href="">Category</a></li>
+  
+      
+    </ul>
+    <div class="img"></div>
+    
+
+</div>
+    
+</body>
+<script>
+    const Modal=document.getElementById("Modal")
+    function OpenModal(){
+        Modal.classList.add("Active")
+    }
+    function CloseModal(){
+        Modal.classList.remove("Active")
+    }
+    
+</script>
+</html>
